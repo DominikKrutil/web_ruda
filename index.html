@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engelmar Apartments</title>
+    <meta name="description" content="Engelmar Apartments – moderní ubytování v srdci Bavorského lesa. Komfortní apartmány pro vaši dovolenou.">
+
+    <!-- link na styly -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- link na fonty -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- link na ikonky -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    
+    <header>
+        <div class="nav-container">
+            <div class="nav-content">
+                
+                <div class="logo-container">
+                    <img class="logo" src="images/logo/logo.png" alt="logo">
+                </div>
+
+                <nav>
+                    <ul class="nav-menu"> 
+                        <li class="nav-item">
+                            <button class="close-btn btn" aria-label="Zavřít menu">
+                                <i class="fas fa-xmark close-icon icons"></i>
+                            </button>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link active-link">Domů</a></li>
+                        
+                       <li class="nav-item">
+                            <div class="apartments-dropdown-menu-wrapper">
+                                
+                                <a href="#apartments" class="nav-link apartments-main-link">Apartmány</a>
+                                <button type="button" class="apartments-dropdown-btn" aria-label="Zobrazit podmenu">
+                                    <i class="fas fa-chevron-down apartments-icon"></i>
+                                </button>
+        
+                            </div>
+
+                            <ul class="apartments-dropdown">
+                                <li><a href="#adriana" class="apartments-dropdown-link">Apartmán Adriana</a></li>
+                                <li><a href="#aneta" class="apartments-dropdown-link">Apartmán Aneta</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item"><a href="#activities" class="nav-link">Aktivity</a></li>
+                        <li class="nav-item"><a href="#reservation" class="nav-link">Rezervace</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link">Kontakt</a></li>
+                    </ul>
+                </nav>
+
+
+                    <ul class="language-menu-wrapper">
+                        <span class="current-language">CZ</span>
+                        <button type="button" class="language-dropdown-btn" aria-label="Zobrazit podmenu">
+                            <i class="fas fa-chevron-down language-icon"></i>
+                        </button>
+
+                        <div class="language-menu">
+                            <li class="language-item"><a href="index-de.html" class="language-link">DE</a></li>
+                            <li class="language-item"><a href="index-en.html" class="language-link">EN</a></li>
+                        </div>
+                    </ul>
+
+                    <button class="open-btn btn" aria-label="Otevřít menu">
+                        <i class="fas fa-bars open-icon icons"></i>
+                    </button>
+                </div>
+            
+            </div>
+        </div>
+    </header>
+    
+    
+    <main>
+        
+
+        <section id="hero">
+    <div id="hero-slider">
+        <div class="hero-slider-wrapper">
+            <button class="slider-btn prev" aria-label="Předchozí obrázek">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div class="hero-slider-track">
+                <div class="hero-slide">
+                    <img src="images/hero/hero-slider1.webp" alt="Ukázka apartmánu">
+                </div>
+                <div class="hero-slide">
+                    <img src="images/hero/hero-slider2.webp" alt="Ukázka apartmánu">
+                </div>
+                <div class="hero-slide">
+                    <img src="images/hero/hero-slider3.webp" alt="Ukázka apartmánu">
+                </div>
+                <div class="hero-slide">
+                    <img src="images/hero/hero-slider4.webp" alt="Ukázka apartmánu">
+                </div>
+                <div class="hero-slide">
+                    <img src="images/hero/hero-slider5.webp" alt="Ukázka apartmánu">
+                </div>
+            </div>
+
+
+            <button class="slider-btn next" aria-label="Další obrázek">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1>ENGELMAR APARTMENTS</h1>
+            <p class="hero-p">
+                Vítejte na stránkách našich nových apartmánů v Sankt Englmaru. Naše prázdninové byty se nacházejí přímo v srdci Bavorského lesa v areálu resortu Predigstuhl. 
+                Celkem nabízíme dva plně vybavené byty s celkovou kapacitou až 10 osob. Pobyt vždy zahrnuje neomezený vstup do bazénů, saun a fitness centra. 
+            </p>
+            <a href="#reservation" class="hero-cta-link">Rezervace</a>
+        </div>
+    </div>
+</section>
+
+
+
+
+        <section id="apartments">
+
+            <h2 class="our-offer">Naše nabídka</h2>
+
+            <div class="apartments-content-wrapper">
+                <div class="apartments-cards">
+                    <div class="apartment-card">
+                        <div class="apartment-img-wrapper">
+                            <img src="images/adriana/adriana-preview.webp" alt="ukázka apartmánu Adriana">
+                        </div>
+                        <h3>Apartmán Adriana</h3>
+                        <p class="apartments-subtitle">53m2, max 6 osob</p>
+                        <p class="apartment-p">Zcela nový, plně vybavený dvoupokojový byt o velikosti 53 m² se samostatnou ložnicí a prostorným obývacím pokojem s kuchyňským koutem. V ložnici je k dispozici manželská postel a patrová postel, obývací část nabízí další lůžko na rozkládací pohovce. Součástí je balkon s posezením a výhledem do přírody. Hlavní výhodou je poloha v budově 6, kde se nachází kompletní wellness zařízení – za minutu chůze tak můžete využívat bazén, sauny i rozlehlé fitness. V apartmánu nechybí ani základní sportovní vybavení pro volný čas.</p>
+                        <a href="#adriana" class="apartment-cta-link">Zjistit více</a>
+                    </div>
+                    <div class="apartment-card">
+                        <div class="apartment-img-wrapper">
+                            <img src="images/aneta/aneta-preview.webp" alt="ukázka apartmánu Aneta">
+                        </div>
+                        <h3>Apartmán Aneta</h3>
+                        <p class="apartments-subtitle">33m2, max 4 osoby</p>
+                        <p class="apartment-p">Útulný, plně bezbariérový byt o velikosti 33 m² v přízemí budovy 7 s přímým vstupem na vlastní terasu a do přírody. K dispozici je manželská postel a rozkládací pohovka pro celkovou kapacitu až 4 osoby. Plně vybavená kuchyně zahrnuje vše potřebné pro váš pobyt včetně myčky a kávovaru. Předností je možnost dojezdu koly až k terase s možností jejich dobíjení. I z budovy 7 se pohodlně a suchou nohou dostanete do wellness centra, kde můžete využívat neomezené vstupy do saun, bazénů i profesionálního fitness.</p>
+                        <a href="#aneta" class="apartment-cta-link">Zjistit více</a>
+                    </div>
+                </div>
+            </div>
+            <div class="apartments-info-wrapper">
+                <div id="adriana" class="adriana apartment-info">
+                    <div class="apartment-info-content">
+                        <h2>Apartmán Adriana</h2>
+                        <p class="apartment-info-subtitle">53m2, max 6 osob</p>
+                        <p class="apartment-info-p">zcela nový, plně vybavený dvoupokojový prázdninový byt o velikosti 53 m2 , se samostatnou ložnicí a prostorným obývacím pokojem spojeným s kuchyňskou linkou. V ložnici je k dispozici prostorná dvojlůžková postel s rozměry 180x200 cm a patrová postel se dvěma plnohodnotnými lůžky vždy 90x200cm. Obývací část má příjemnou relaxační pohovku s možností rozkladu na lůžko 140x200cm. Vlastní koupelna s toaletou nabízí vše co potřebujete pro krátký i dlouhodobý pobyt. Součástí apartmánu je balkon s posezením, kde můžete při šálku dobré kávy pozorovat krásy místní přírody.Jednou z hlavních výhod apartmánu je poloha v budově 6, kde se zároveň v nižších patrech nachází kompletní wellness zařízení. Tedy doslova za minutu chůze můžete cvičit v rozlehlém fitness, odpočívat v jedné ze tří saun či plavat v krásném bazénu s relaxačními prvky. V obou našich apartmánech najdete vždy i sportovní vybavení jako fotbalový míč, mini-golfové hole, pingpongové pálky či bandmintonový set.</p>
+                        <a href="#reservation" class="apartment-info-cta">Rezervace</a>
+                    </div>
+                    <div class="apartment-info-slider-wrapper">
+                        <div class="universal-slider" data-current-slide="1">
+                            <div class="slides-container">
+                                <div class="slides-inner">
+                                    <img src="images/adriana/Adriana_06.webp" alt="Adriana 6">
+                                    <img src="images/adriana/Adriana_01.webp" alt="Adriana 1">
+                                    <img src="images/adriana/Adriana_02.webp" alt="Adriana 2">
+                                    <img src="images/adriana/Adriana_03.webp" alt="Adriana 3">
+                                    <img src="images/adriana/Adriana_04.webp" alt="Adriana 4">
+                                    <img src="images/adriana/Adriana_05.webp" alt="Adriana 5">
+                                    <img src="images/adriana/Adriana_06.webp" alt="Adriana 6">
+                                    <img src="images/adriana/Adriana_07.webp" alt="Adriana 7">
+                                    <img src="images/adriana/Adriana_08.webp" alt="Adriana 8">
+                                    <img src="images/adriana/Adriana_09.webp" alt="Adriana 9">
+                                    <img src="images/adriana/Adriana_10.webp" alt="Adriana 10">
+                                    <img src="images/adriana/Adriana_11.webp" alt="Adriana 11">
+                                    <img src="images/adriana/Adriana_12.webp" alt="Adriana 12">
+                                    <img src="images/adriana/Adriana_13.webp" alt="Adriana 13">
+                                    <img src="images/adriana/Adriana_14.webp" alt="Adriana 14">
+                                    <img src="images/adriana/Adriana_15.webp" alt="Adriana 15">
+                                    <img src="images/adriana/Adriana_16.webp" alt="Adriana 16">
+                                    <img src="images/adriana/Adriana_17.webp" alt="Adriana 17">
+                                    <img src="images/adriana/Adriana_18.webp" alt="Adriana 18">
+                                    <img src="images/adriana/Adriana_19.webp" alt="Adriana 19">
+                                    <img src="images/adriana/Adriana_20.webp" alt="Adriana 20">
+                                </div>
+                            </div>
+    
+                            <button class="slider-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                            <button class="slider-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="aneta" class="aneta apartment-info">
+                    <div class="apartment-info-content">
+                        <h2>Apartmán Aneta</h2>
+                        <p class="apartment-info-subtitle">33m2, max 4 osoby</p>
+                        <p class="apartment-info-p">je zcela nový a útulný byt o velikosti 33m2 ,  v přízemí budovy 7, bezbariérový, s přímím vstupem na vlastní terasu. Je zde k dispozici dvojlůžková postel s rozměry 180x200 cm a rozkládací pohovka s lůžkem 140x200 cm. Plně vybavená je i kuchyň včetně myčky nádobí, kávovaru, rychlovarné konvice a mnohého dalšího pro Váš dokonalý pobyt.Jednou z mnoha předností tohoto apartmánu je přímý vstup na terasu a zároveň i do přírody. Pokud rádi jezdíte na kolech, není problém s koly dojet přímo před terasu apartmánu, případně elektrokola ihned pohodlně dobít. I z apartmánu Aneta, tedy budovy 7, se pohodlně a suchou nohou dostanete do wellness centra, kde můžete vždy v ceně ubytování využít neomezené vstupy do všech saun a bazénů či si perfektně zacvičit v profesionálně vybaveném fitness. </p>
+                        <a href="#reservation" class="apartment-info-cta">Rezervace</a>
+                    </div>
+                    <div class="apartment-info-slider-wrapper">
+                        <div class="universal-slider" data-current-slide="0">
+                            <div class="slides-container">
+                                <div class="slides-inner">
+                                    <img src="images/aneta/Aneta_08.webp" alt="Aneta 8">
+                                    <img src="images/aneta/Aneta_01.webp" alt="Aneta 1">
+                                    <img src="images/aneta/Aneta_02.webp" alt="Aneta 2">
+                                    <img src="images/aneta/Aneta_03.webp" alt="Aneta 3">
+                                    <img src="images/aneta/Aneta_04.webp" alt="Aneta 4">
+                                    <img src="images/aneta/Aneta_05.webp" alt="Aneta 5">
+                                    <img src="images/aneta/Aneta_06.webp" alt="Aneta 6">
+                                    <img src="images/aneta/Aneta_07.webp" alt="Aneta 7">
+                                    <img src="images/aneta/Aneta_09.webp" alt="Aneta 9">
+                                    <img src="images/aneta/Aneta_10.webp" alt="Aneta 10">
+                                    <img src="images/aneta/Aneta_11.webp" alt="Aneta 11">
+                                    <img src="images/aneta/Aneta_12.webp" alt="Aneta 12">
+                                    <img src="images/aneta/Aneta_13.webp" alt="Aneta 13">
+                                    <img src="images/aneta/Aneta_14.webp" alt="Aneta 14">
+                                    <img src="images/aneta/Aneta_15.webp" alt="Aneta 15">
+                                    <img src="images/aneta/Aneta_16.webp" alt="Aneta 16">
+                                    <img src="images/aneta/Aneta_17.webp" alt="Aneta 17">
+                                    <img src="images/aneta/Aneta_18.webp" alt="Aneta 18">
+                                    <img src="images/aneta/Aneta_19.webp" alt="Aneta 19">
+                                    <img src="images/aneta/Aneta_20.webp" alt="Aneta 20">
+                                </div>
+                            </div>
+    
+                            <button class="slider-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                            <button class="slider-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </section>
+        <section id="activities">
+            
+            <h2>Aktivity</h2>
+
+            <div class="activities-content">
+                <div class="arround-cards">
+                    <div class="arround-card">
+                        <h3>Sankt Englmar</h3>
+                        <p class="arround-p">státem uznávané klimatické lázně a středisko zimních sportů v přírodním parku Bavorský les. Horská obec slibuje odpočinkovou i aktivní dovolenou v nádherné nízkohorské krajině Bavorského lesa v létě i v zimě. Nedaleko úrodné Podunajské nížiny, a přesto již hluboko v horách, v průsmyku hřebene Bavorského lesa, leží mezi Predigtstuhlem a Pröllerem horská obec Sankt Englmar.</p>
+                    </div>
+                    <div class="arround-card">
+                        <h3>Predigtstuhl Resort</h3>
+                        <p class="arround-p">Apartmánový komplex rodinného typu, který se skládá z osmi, vzájemně propojenými budovami. Náš apartmán Adriana se nachází v budově 6 a apartmán Aneta v budově 7. 
+                                        <br> Součástí areálu je parkování, krytá herna pro děti, fotbalová hala, krytá motokárová dráha, bazén a sauna, posilovna, venkovní dětské hřiště, sportovní a tenisové hřiště, venkovní šachy, restaurace, bar a mnoho dalšího...   
+                                        <br>    Těšíme se na Vás ! </p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="activities-cards">
+                <div class="activiti-card">
+                    <h3>Léto</h3>
+                    <p class="activities-p">
+                                            Uvnitř resortu najdou celou řadu vyžití všichni členové rodiny. Je zde venkovní koupaliště, velké hřiště pro děti, občerstvení na baru, stolní tenis, venkovní šachy, billiard a minigolf.<br> <br>
+                                            Neustále je k dispozici „Family World“ se svými outdoorovými i indoorovými možnostmi. K dispozici jsou prolézačky, skluzavky, houpačky, elektroauta, minigolf, pétanque atp.<br> <br>
+                                            Součástí areálu je krytá hala na tenis a fotbal, horolezecká stěna a střelnice pro lukostřelbu.<br> <br>
+                                            Uvnitř naleznete krytý bazén, wellness a sauny.<br> <br>
+                                            V okolí resortu najdete celou řadu vyžití. Užít si zde můžete cyklistiku, jízdu na horském kole, pěší turistiku, nordic walking, horolezectví, jízdu na koni, rybaření nebo velmi neobvyklé zábavné sporty – v prázdninovém regionu St. Englmar máte široký výběr, jak si zpříjemnit volný čas a být aktivní! V bezprostřední blízkosti se nachází mnoho zajímavostí, ke kterým se dostanete pěšky.<br> <br>
+                                            Nejdelší letní sáňkařská dráha ve východním Bavorsku, bullcarting, lesní lezení, lesní stezka korunami stromů, tandemové létání na rogalu nebo četné fitness stezky v St. Englmaru a okolí jsou zárukou zábavy a akce pro malé i velké.<br> <br>
+                                            Další letní zábava se jmenuje BullCart. V létě se z lyžařského vleku stává závodní dráha! Vezměte si BullCart a vyrazte na divokou jízdu! Dokonalá zábava na sjezdovce, při které se ani nezapotíte. Zažijte "lesní biotop" z jiné perspektivy. Dráha dlouhá 370 m ve vzdušných výškách (až 30 m). Čistý zážitek z přírody nad korunami stromů v Maibrunnu / Sankt Englmaru. Vyhlídková plošina nabízí nádherný výhled na horské masivy Bavorského lesa, údolí Dunaje a pláně Gäuboden!<br> <br>
+                                            Golfový ráj na úpatí Bavorského lesa.<br> <br>
+                                            V okolí se nacházejí dvě golfová hřiště, kde si můžete vyzkoušet své dovednosti. Těší se na vás Straubing Golf Club a také Deggendorf Golf Club.<br> <br>
+                                            Sankt Englmar nabízí skvělou příležitost přírodního koupání v přírodním biotopu v docházkové vzdálenosti od resortu.
+                    </p>
+                </div>
+                <div class="activiti-card">
+                    <h3>Zima</h3>
+                    <p class="activities-p">
+                                            Pohoří Predigtstuhl a Pröller nabízí ideální podmínky pro milovníky zimy. Ať už se jedná o sjezdové lyžování na 12 kilometrech, běžecké lyžování na celkem 70 kilometrech tratí nebo odvážný snowboarding na upravených sjezdovkách, na své si přijdete.<br> <br>
+                                            O další potěšení se postarají sněžnice, sáňkování, bruslení a curling. Ať už se jedná o sjezdové lyže, snowboardy, běžecké sety, helmy nebo sněžnice – půjčovna lyží Bergshop24 má to správné vybavení pro celou rodinu.<br> <br>
+                                            Areál pro alpské lyžování nabízí 12 sjezdovek a 12 vleků.<br> <br>
+                                            Lyžařský vlek Predigtstuhl se nachází v rekreační oblasti Sankt Englmar (Bavorský les), ve čtvrti Markbuchen, 500 m od hotelu. Skládá se z několika vleků, včetně dlouhého dvojitého vleku s 1100 m a vleku Herzerllift s 700 m.<br> <br>
+                                            Lyžařský vlek Kapellenberg: Na Kapellenbergu najdou malí i velcí čistou zimní zábavu. Návštěvníci jsou nadšeni nejen ve dne, ale i za svitu reflektorů ve večerních hodinách.<br> <br>
+                                            Lyžařský vlek Grün / Maibrunn: Na běžkaře čekají nekonečné běžecké tratě, na snowboardisty naše vlastní halfpipe a také dvojitý lyžařský vlek. Dlouhé dny na sjezdovkách zaručují naše reflektory.<br> <br>
+                                            Lyžařský vlek Pröller: Sjezdovky vhodné pro rodiny s dětmi a dobře upravené tratě pro lyžaře a ambiciózní skialpinisty. V lyžařském trojúhelníku Pröller si přijdou na své také snowboardisté, běžkaři a sáňkaři. Čtyři vleky a 6 km sjezdovek nabízí lyžařské potěšení pro každého. Nejmodernější zasněžování zaručuje vysokou spolehlivost sněhové pokrývky.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="activities-info-slider-wrapper">
+                <div class="universal-slider" data-current-slide="0">
+                    <div class="slides-container">
+                        <div class="slides-inner">
+                            <img src="images/aktivity/01.webp" alt="Aktivita 1">
+                            <img src="images/aktivity/02.webp" alt="Aktivita 2">
+                            <img src="images/aktivity/03.webp" alt="Aktivita 3">
+                            <img src="images/aktivity/04.webp" alt="Aktivita 4">
+                            <img src="images/aktivity/05.webp" alt="Aktivita 5">
+                            <img src="images/aktivity/06.webp" alt="Aktivita 6">
+                            <img src="images/aktivity/07.webp" alt="Aktivita 7">
+                            <img src="images/aktivity/08.webp" alt="Aktivita 8">
+                            <img src="images/aktivity/09.webp" alt="Aktivita 9">
+                            <img src="images/aktivity/10.webp" alt="Aktivita 10">
+                            <img src="images/aktivity/11.webp" alt="Aktivita 11">
+                            <img src="images/aktivity/12.webp" alt="Aktivita 12">
+                            <img src="images/aktivity/13.webp" alt="Aktivita 13">
+                            <img src="images/aktivity/14.webp" alt="Aktivita 14">
+                            <img src="images/aktivity/15.webp" alt="Aktivita 15">
+                            <img src="images/aktivity/16.webp" alt="Aktivita 16">
+                            <img src="images/aktivity/17.webp" alt="Aktivita 17">
+                            <img src="images/aktivity/18.webp" alt="Aktivita 18">
+                            <img src="images/aktivity/19.webp" alt="Aktivita 19">
+                            <img src="images/aktivity/20.webp" alt="Aktivita 20">
+                            <img src="images/aktivity/21.webp" alt="Aktivita 21">
+                            <img src="images/aktivity/22.webp" alt="Aktivita 22">
+                            <img src="images/aktivity/23.webp" alt="Aktivita 23">
+                            <img src="images/aktivity/24.webp" alt="Aktivita 24">
+                            <img src="images/aktivity/25.webp" alt="Aktivita 25">
+                            <img src="images/aktivity/26.webp" alt="Aktivita 26">
+                            <img src="images/aktivity/27.webp" alt="Aktivita 27">
+                            <img src="images/aktivity/28.webp" alt="Aktivita 28">
+                            <img src="images/aktivity/29.webp" alt="Aktivita 29">
+                            <img src="images/aktivity/30.webp" alt="Aktivita 30">
+                            <img src="images/aktivity/31.webp" alt="Aktivita 31">
+                            <img src="images/aktivity/32.webp" alt="Aktivita 32">
+                            <img src="images/aktivity/33.webp" alt="Aktivita 33">
+                            <img src="images/aktivity/34.webp" alt="Aktivita 34">
+                            <img src="images/aktivity/35.webp" alt="Aktivita 35">
+                            <img src="images/aktivity/36.webp" alt="Aktivita 36">
+                            <img src="images/aktivity/37.webp" alt="Aktivita 37">
+                            <img src="images/aktivity/38.webp" alt="Aktivita 38">
+                            <img src="images/aktivity/39.webp" alt="Aktivita 39">
+                            <img src="images/aktivity/40.webp" alt="Aktivita 40">
+                            <img src="images/aktivity/41.webp" alt="Aktivita 41">
+                            <img src="images/aktivity/42.webp" alt="Aktivita 42">
+                            <img src="images/aktivity/43.webp" alt="Aktivita 43">
+                            <img src="images/aktivity/44.webp" alt="Aktivita 44">
+                        </div>
+                    </div>
+    
+                    <button class="slider-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                    <button class="slider-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+                </div>
+            </div>
+        </section>
+        <section id="reservation">
+            <h2>Rezervace</h2>
+
+            <script type="text/javascript">
+                var bookingEngineConfig = {
+                id: '019e69db-fb64-70a3-9cc3-4bfea8623e3e',
+                lang: 'de',
+                currency: 'EUR'
+            };
+
+            var a = document.createElement('script');
+            a.src = 'https://booking.previo.app/loader/';
+            document.head.appendChild(a);
+            </script>
+
+            <div id="previo-booking-engine"></div>
+        </section>
+        <section id="contact">
+           <div class="contact-content-wrapper">
+                <h2>Kontaktujte nás</h2>
+
+                <div class="contact-content">
+                    <div class="contact-card">
+                        <h3>ADRESA</h3>
+                        
+                        <ul class="contact-card-menu">
+                            <li class="contact-card-item">Englmar Apartments</li>
+                            <li class="contact-card-item">Am Predigtstuhl 2, Sankt</li>
+                            <li class="contact-card-item">Englmar, 94379, Německo</li>
+                        </ul>
+
+                        <div class="contact-map-wrapper">
+                           <iframe 
+                                class="contact-map"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10526.04618790076!2d12.808608402431698!3d49.00287968537678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477541a37e121213%3A0x41ed24a40937c9a0!2s94379%20Sankt%20Englmar%2C%20N%C4%9Bmecko!5e0!3m2!1scs!2scz!4v1709700000000!5m2!1scs!2scz" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+
+                        <ul class="contact-card-menu">
+                            <li class="contact-card-item" id="contact-card-item1"><h3>KONTAKTNÍ ÚDAJE</h3></li>
+                            <li class="contact-card-item">email :  info@englamar-apartments.eu</li>
+                            <li class="contact-card-item">tel. :   +420 777 329 399 </li>
+                            <li class="contact-card-item">+420 603 321 731 </li>
+                        </ul>
+                    </div>
+                    <div class="contact-card">
+                    <h3>NAPIŠTE NÁM</h3>
+                    
+                    <form class="contact-form" action="send.php" method="POST">
+                        <!-- Jméno + příjmení -->
+                        <div class="form-row">
+                            <input type="text" name="firstName" placeholder="Jméno" required>
+                            <input type="text" name="secondName" placeholder="Příjmení" required>
+                        </div>
+
+                        <!-- Email -->
+                        <input type="email" name="email" placeholder="Email" required>
+
+                        <!-- Předmět -->
+                        <input type="text" name="subject" placeholder="Předmět" required>
+
+                        <!-- Zpráva -->
+                        <textarea name="message" placeholder="Zpráva" required></textarea>
+
+                        <!-- Odeslat -->
+                        <button type="submit">Odeslat zprávu</button>
+                    </form>
+                    <div id="form-message"></div>
+                </div>
+           </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-card">
+            <ul class="footer-list">  
+                <li class="footer-item"><span class="footer-span">ADRESA:</span></li>
+                <li class="footer-item">Apartmány Englmar</li>
+                <li class="footer-item">Am Predigtstuhl 2</li>
+                <li class="footer-item">Sankt Englmar, 94379, Německo</li>
+            </ul>
+        </div>
+         <div class="footer-card">
+            <ul class="footer-list">
+                <li class="footer-item"><span class="footer-span">KONTAKTY:</span></li>
+                <li class="footer-item">info@englamar-apartments.eu</li>
+                <li class="footer-item">+420 777 329 399</li>
+                <li class="footer-item">+420 603 321 731</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/hero-slider.js"></script>
+    <script src="js/universal-slider.js"></script>
+    <script src="js/send.js"></script>
+</body>
+</html>

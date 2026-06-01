@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engelmar Apartments</title>
+    <meta name="description" content="Engelmar Apartments – modern accommodation in the heart of the Bavarian Forest. Comfortable apartments for your holiday.">
+
+    <!-- link to styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- link to fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- link to icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    
+    
+    <header>
+        <div class="nav-container">
+            <div class="nav-content">
+                
+                <div class="logo-container">
+                    <img class="logo" src="images/logo/logo.png" alt="logo">
+                </div>
+
+                <nav>
+                    <ul class="nav-menu"> 
+                        <li class="nav-item">
+                            <button class="close-btn btn" aria-label="Close menu">
+                                <i class="fas fa-xmark close-icon icons"></i>
+                            </button>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link active-link">Home</a></li>
+                        
+                       <li class="nav-item">
+                            <div class="apartments-dropdown-menu-wrapper">
+                                
+                                <a href="#apartments" class="nav-link apartments-main-link">Apartments</a>
+                                <button type="button" class="apartments-dropdown-btn" aria-label="Show submenu">
+                                    <i class="fas fa-chevron-down apartments-icon"></i>
+                                </button>
+        
+                            </div>
+
+                            <ul class="apartments-dropdown">
+                                <li><a href="#adriana" class="apartments-dropdown-link">Apartment Adriana</a></li>
+                                <li><a href="#aneta" class="apartments-dropdown-link">Apartment Aneta</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item"><a href="#activities" class="nav-link">Activities</a></li>
+                        <li class="nav-item"><a href="#reservation" class="nav-link">Reservation</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+
+
+                    <ul class="language-menu-wrapper">
+                        <span class="current-language">EN</span>
+                        <button type="button" class="language-dropdown-btn" aria-label="Show submenu">
+                            <i class="fas fa-chevron-down language-icon"></i>
+                        </button>
+
+                        <div class="language-menu">
+                            <li class="language-item"><a href="index-de.html" class="language-link">DE</a></li>
+                            <li class="language-item"><a href="index.html" class="language-link">CZ</a></li>
+                        </div>
+                    </ul>
+
+                    <button class="open-btn btn" aria-label="Open menu">
+                        <i class="fas fa-bars open-icon icons"></i>
+                    </button>
+                </div>
+            
+            </div>
+        </div>
+    </header>
+    
+    
+    <main>
+        
+
+        <section id="hero">
+    <div id="hero-slider">
+        <div class="hero-slider-wrapper">
+            <button class="slider-btn prev" aria-label="Previous image">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div class="hero-slider-track">
+                <div class="hero-slide">
+                    <img src="images/hero/hero-slider1.webp" alt="Apartment preview">
+                </div>
+                <div class="hero-slide">
+                    <img src="images/hero/hero-slider2.webp" alt="Apartment preview">
+                </div>
+                <div class="hero-slide">
+                    <img src="images/hero/hero-slider3.webp" alt="Apartment preview">
+                </div>
+                <div class="hero-slide">
+                    <img src="images/hero/hero-slider4.webp" alt="Apartment preview">
+                </div>
+                <div class="hero-slide">
+                    <img src="images/hero/hero-slider5.webp" alt="Apartment preview">
+                </div>
+            </div>
+
+
+            <button class="slider-btn next" aria-label="Next image">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1>ENGELMAR APARTMENTS</h1>
+            <p class="hero-p">
+                Welcome to our new apartments in Sankt Englmar. Our holiday apartments are located in the heart of the Bavarian Forest in the Predigstuhl resort area. 
+                We offer two fully equipped apartments with a total capacity of up to 10 guests. Your stay always includes unlimited access to pools, saunas, and a fitness center.
+            </p>
+            <a href="#reservation" class="hero-cta-link">Reservation</a>
+        </div>
+    </div>
+</section>
+
+
+
+
+        <section id="apartments">
+
+            <h2 class="our-offer">Our offer</h2>
+
+            <div class="apartments-content-wrapper">
+                <div class="apartments-cards">
+                    <div class="apartment-card">
+                        <div class="apartment-img-wrapper">
+                            <img src="images/adriana/adriana-preview.webp" alt="Apartment Adriana preview">
+                        </div>
+                        <h3>Apartment Adriana</h3>
+                        <p class="apartments-subtitle">53m², max 6 guests</p>
+                        <p class="apartment-p">A brand-new, fully equipped two-room apartment of 53 m² with a separate bedroom and a spacious living room with a kitchenette. The bedroom features a double bed and a bunk bed, while the living area offers an additional sleeping option on a sofa bed. The apartment also includes a balcony with seating and a view of nature. A major advantage is its location in building 6, where the complete wellness facilities are located – just a one-minute walk to the pool, saunas, and spacious fitness center. The apartment also includes basic sports equipment for leisure activities.</p>
+                        <a href="#adriana" class="apartment-cta-link">Learn more</a>
+                    </div>
+                    <div class="apartment-card">
+                        <div class="apartment-img-wrapper">
+                            <img src="images/aneta/aneta-preview.webp" alt="Apartment Aneta preview">
+                        </div>
+                        <h3>Apartment Aneta</h3>
+                        <p class="apartments-subtitle">33m², max 4 guests</p>
+                        <p class="apartment-p">A cozy, fully barrier-free 33 m² apartment on the ground floor of building 7 with direct access to a private terrace and nature. It features a double bed and a sofa bed for up to 4 guests. The fully equipped kitchen includes everything you need for your stay, including a dishwasher and coffee machine. A key advantage is direct access for bikes right to the terrace with the option to charge e-bikes. From building 7, you can also easily and comfortably reach the wellness center, where you can enjoy unlimited access to saunas, pools, and a professional fitness center.</p>
+                        <a href="#aneta" class="apartment-cta-link">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="apartments-info-wrapper">
+                <div id="adriana" class="adriana apartment-info">
+                    <div class="apartment-info-content">
+                        <h2>Apartment Adriana</h2>
+                        <p class="apartment-info-subtitle">53m², max 6 guests</p>
+                        <p class="apartment-info-p">A brand-new, fully equipped two-room holiday apartment of 53 m² with a separate bedroom and a spacious living room connected to a kitchen unit. The bedroom offers a spacious double bed measuring 180x200 cm and a bunk bed with two full-size beds of 90x200 cm each. The living area includes a comfortable sofa that can be converted into a 140x200 cm bed. The private bathroom with toilet provides everything you need for both short and long stays. The apartment includes a balcony with seating where you can enjoy a cup of coffee while admiring the beautiful surrounding nature. One of the main advantages is its location in building 6, where the complete wellness facilities are located on the lower floors. You are just a one-minute walk from a large fitness center, three types of saunas, and a beautiful pool with relaxation features. Both apartments also include sports equipment such as a football, mini-golf clubs, table tennis paddles, and a badminton set.</p>
+                        <a href="#reservation" class="apartment-info-cta">Reservation</a>
+                    </div>
+                    <div class="apartment-info-slider-wrapper">
+                        <div class="universal-slider" data-current-slide="1">
+                            <div class="slides-container">
+                                <div class="slides-inner">
+                                    <img src="images/adriana/Adriana_06.webp" alt="Adriana 6">
+                                    <img src="images/adriana/Adriana_01.webp" alt="Adriana 1">
+                                    <img src="images/adriana/Adriana_02.webp" alt="Adriana 2">
+                                    <img src="images/adriana/Adriana_03.webp" alt="Adriana 3">
+                                    <img src="images/adriana/Adriana_04.webp" alt="Adriana 4">
+                                    <img src="images/adriana/Adriana_05.webp" alt="Adriana 5">
+                                    <img src="images/adriana/Adriana_06.webp" alt="Adriana 6">
+                                    <img src="images/adriana/Adriana_07.webp" alt="Adriana 7">
+                                    <img src="images/adriana/Adriana_08.webp" alt="Adriana 8">
+                                    <img src="images/adriana/Adriana_09.webp" alt="Adriana 9">
+                                    <img src="images/adriana/Adriana_10.webp" alt="Adriana 10">
+                                    <img src="images/adriana/Adriana_11.webp" alt="Adriana 11">
+                                    <img src="images/adriana/Adriana_12.webp" alt="Adriana 12">
+                                    <img src="images/adriana/Adriana_13.webp" alt="Adriana 13">
+                                    <img src="images/adriana/Adriana_14.webp" alt="Adriana 14">
+                                    <img src="images/adriana/Adriana_15.webp" alt="Adriana 15">
+                                    <img src="images/adriana/Adriana_16.webp" alt="Adriana 16">
+                                    <img src="images/adriana/Adriana_17.webp" alt="Adriana 17">
+                                    <img src="images/adriana/Adriana_18.webp" alt="Adriana 18">
+                                    <img src="images/adriana/Adriana_19.webp" alt="Adriana 19">
+                                    <img src="images/adriana/Adriana_20.webp" alt="Adriana 20">
+                                </div>
+                            </div>
+    
+                            <button class="slider-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                            <button class="slider-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="aneta" class="aneta apartment-info">
+                    <div class="apartment-info-content">
+                        <h2>Apartment Aneta</h2>
+                        <p class="apartment-info-subtitle">33m², max 4 guests</p>
+                        <p class="apartment-info-p">A brand-new and cozy 33 m² apartment on the ground floor of building 7, barrier-free, with direct access to a private terrace. It features a double bed measuring 180x200 cm and a sofa bed with a 140x200 cm sleeping area. The fully equipped kitchen includes a dishwasher, coffee machine, kettle, and many other amenities for your perfect stay. One of the many advantages of this apartment is direct access to the terrace and nature. If you enjoy cycling, you can ride your bike directly to the terrace and easily charge e-bikes there. From Apartment Aneta in building 7, you can also comfortably and dry-footedly reach the wellness center, where you can enjoy unlimited access to saunas, pools, and a fully equipped fitness center.</p>
+                        <a href="#reservation" class="apartment-info-cta">Reservation</a>
+                    </div>
+                    <div class="apartment-info-slider-wrapper">
+                        <div class="universal-slider" data-current-slide="0">
+                            <div class="slides-container">
+                                <div class="slides-inner">
+                                    <img src="images/aneta/Aneta_08.webp" alt="Aneta 8">
+                                    <img src="images/aneta/Aneta_01.webp" alt="Aneta 1">
+                                    <img src="images/aneta/Aneta_02.webp" alt="Aneta 2">
+                                    <img src="images/aneta/Aneta_03.webp" alt="Aneta 3">
+                                    <img src="images/aneta/Aneta_04.webp" alt="Aneta 4">
+                                    <img src="images/aneta/Aneta_05.webp" alt="Aneta 5">
+                                    <img src="images/aneta/Aneta_06.webp" alt="Aneta 6">
+                                    <img src="images/aneta/Aneta_07.webp" alt="Aneta 7">
+                                    <img src="images/aneta/Aneta_09.webp" alt="Aneta 9">
+                                    <img src="images/aneta/Aneta_10.webp" alt="Aneta 10">
+                                    <img src="images/aneta/Aneta_11.webp" alt="Aneta 11">
+                                    <img src="images/aneta/Aneta_12.webp" alt="Aneta 12">
+                                    <img src="images/aneta/Aneta_13.webp" alt="Aneta 13">
+                                    <img src="images/aneta/Aneta_14.webp" alt="Aneta 14">
+                                    <img src="images/aneta/Aneta_15.webp" alt="Aneta 15">
+                                    <img src="images/aneta/Aneta_16.webp" alt="Aneta 16">
+                                    <img src="images/aneta/Aneta_17.webp" alt="Aneta 17">
+                                    <img src="images/aneta/Aneta_18.webp" alt="Aneta 18">
+                                    <img src="images/aneta/Aneta_19.webp" alt="Aneta 19">
+                                    <img src="images/aneta/Aneta_20.webp" alt="Aneta 20">
+                                </div>
+                            </div>
+    
+                            <button class="slider-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                            <button class="slider-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </section>
+        <section id="activities">
+            
+            <h2>Activities</h2>
+
+            <div class="activities-content">
+                <div class="arround-cards">
+                    <div class="arround-card">
+                        <h3>Sankt Englmar</h3>
+                        <p class="arround-p">A state-recognized climatic spa and winter sports resort in the Bavarian Forest Nature Park. This mountain village offers both relaxing and active holidays in the beautiful low mountain landscape of the Bavarian Forest, in both summer and winter. Located near the fertile Danube lowlands yet deep in the mountains, between Predigtstuhl and Pröller, Sankt Englmar lies in a mountain pass of the Bavarian Forest ridge.</p>
+                    </div>
+                    <div class="arround-card">
+                        <h3>Predigtstuhl Resort</h3>
+                        <p class="arround-p">A family-style apartment complex consisting of eight interconnected buildings. Our Apartment Adriana is located in building 6 and Apartment Aneta in building 7. 
+                                        <br> The resort includes parking, an indoor children's play area, a football hall, an indoor go-kart track, a pool and sauna, a gym, outdoor playgrounds, sports and tennis courts, outdoor chess, a restaurant, a bar, and much more...   
+                                        <br> We look forward to welcoming you!</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="activities-cards">
+                <div class="activiti-card">
+                    <h3>Summer</h3>
+                    <p class="activities-p">
+                        Inside the resort, all family members will find plenty of activities. There is an outdoor swimming pool, a large playground, a bar with refreshments, table tennis, outdoor chess, billiards, and mini golf.<br><br>
+                        The “Family World” is always available with outdoor and indoor activities, including climbing frames, slides, swings, electric cars, mini golf, pétanque, and more.<br><br>
+                        The resort also includes an indoor tennis and football hall, a climbing wall, and an archery range.<br><br>
+                        Indoors you will find a swimming pool, wellness area, and saunas.<br><br>
+                        The surrounding area offers cycling, mountain biking, hiking, Nordic walking, climbing, horse riding, fishing, and many unusual sports activities.<br><br>
+                        The longest summer toboggan run in Eastern Bavaria, bullcarting, forest climbing, a treetop trail, tandem paragliding, and numerous fitness trails provide fun for all ages.<br><br>
+                        Another summer attraction is BullCart – a downhill ride on a former ski lift track.<br><br>
+                        Golf lovers can enjoy nearby courses at Straubing and Deggendorf.<br><br>
+                        Sankt Englmar also offers natural bathing areas within walking distance of the resort.
+                    </p>
+                </div>
+                <div class="activiti-card">
+                    <h3>Winter</h3>
+                    <p class="activities-p">
+                        The Predigtstuhl and Pröller mountains offer ideal conditions for winter sports lovers. Whether alpine skiing on 12 km of slopes, cross-country skiing on 70 km of trails, or snowboarding on prepared pistes – there is something for everyone.<br><br>
+                        Snowshoeing, sledding, skating, and curling are also available. Ski and snowboard equipment can be rented locally for the whole family.<br><br>
+                        The alpine ski area offers 12 slopes and 12 lifts.<br><br>
+                        The Predigtstuhl ski lift is located only 500 m from the resort and includes several lifts, including a 1100 m long double lift and the Herzerllift.<br><br>
+                        Kapellenberg offers fun for families and evening skiing under floodlights.<br><br>
+                        Grün/Maibrunn offers cross-country trails, a halfpipe, and floodlit slopes.<br><br>
+                        Pröller ski area provides family-friendly slopes, ski touring routes, and snowboarding opportunities with modern snowmaking systems ensuring reliable snow conditions.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="activities-info-slider-wrapper">
+                <div class="universal-slider" data-current-slide="0">
+                    <div class="slides-container">
+                        <div class="slides-inner">
+                            <img src="images/aktivity/01.webp" alt="Activity 1">
+                            <img src="images/aktivity/02.webp" alt="Activity 2">
+                            <img src="images/aktivity/03.webp" alt="Activity 3">
+                            <img src="images/aktivity/04.webp" alt="Activity 4">
+                            <img src="images/aktivity/05.webp" alt="Activity 5">
+                            <img src="images/aktivity/06.webp" alt="Activity 6">
+                            <img src="images/aktivity/07.webp" alt="Activity 7">
+                            <img src="images/aktivity/08.webp" alt="Activity 8">
+                            <img src="images/aktivity/09.webp" alt="Activity 9">
+                            <img src="images/aktivity/10.webp" alt="Activity 10">
+                            <img src="images/aktivity/11.webp" alt="Activity 11">
+                            <img src="images/aktivity/12.webp" alt="Activity 12">
+                            <img src="images/aktivity/13.webp" alt="Activity 13">
+                            <img src="images/aktivity/14.webp" alt="Activity 14">
+                            <img src="images/aktivity/15.webp" alt="Activity 15">
+                            <img src="images/aktivity/16.webp" alt="Activity 16">
+                            <img src="images/aktivity/17.webp" alt="Activity 17">
+                            <img src="images/aktivity/18.webp" alt="Activity 18">
+                            <img src="images/aktivity/19.webp" alt="Activity 19">
+                            <img src="images/aktivity/20.webp" alt="Activity 20">
+                            <img src="images/aktivity/21.webp" alt="Activity 21">
+                            <img src="images/aktivity/22.webp" alt="Activity 22">
+                            <img src="images/aktivity/23.webp" alt="Activity 23">
+                            <img src="images/aktivity/24.webp" alt="Activity 24">
+                            <img src="images/aktivity/25.webp" alt="Activity 25">
+                            <img src="images/aktivity/26.webp" alt="Activity 26">
+                            <img src="images/aktivity/27.webp" alt="Activity 27">
+                            <img src="images/aktivity/28.webp" alt="Activity 28">
+                            <img src="images/aktivity/29.webp" alt="Activity 29">
+                            <img src="images/aktivity/30.webp" alt="Activity 30">
+                            <img src="images/aktivity/31.webp" alt="Activity 31">
+                            <img src="images/aktivity/32.webp" alt="Activity 32">
+                            <img src="images/aktivity/33.webp" alt="Activity 33">
+                            <img src="images/aktivity/34.webp" alt="Activity 34">
+                            <img src="images/aktivity/35.webp" alt="Activity 35">
+                            <img src="images/aktivity/36.webp" alt="Activity 36">
+                            <img src="images/aktivity/37.webp" alt="Activity 37">
+                            <img src="images/aktivity/38.webp" alt="Activity 38">
+                            <img src="images/aktivity/39.webp" alt="Activity 39">
+                            <img src="images/aktivity/40.webp" alt="Activity 40">
+                            <img src="images/aktivity/41.webp" alt="Activity 41">
+                            <img src="images/aktivity/42.webp" alt="Activity 42">
+                            <img src="images/aktivity/43.webp" alt="Activity 43">
+                            <img src="images/aktivity/44.webp" alt="Activity 44">
+                        </div>
+                    </div>
+    
+                    <button class="slider-btn prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                    <button class="slider-btn next" onclick="moveSlide(this, 1)">&#10095;</button>
+                </div>
+            </div>
+        </section>
+        <section id="reservation">
+            <h2>Reservation</h2>
+            <script type="text/javascript">
+                var bookingEngineConfig = {
+                id: '019e69db-fb64-70a3-9cc3-4bfea8623e3e',
+                lang: 'de',
+                currency: 'EUR'
+                };
+
+                var a = document.createElement('script');
+                a.src = 'https://booking.previo.app/loader/';
+                document.head.appendChild(a);
+            </script>
+
+            <div id="previo-booking-engine"></div>
+        </section>
+        <section id="contact">
+           <div class="contact-content-wrapper">
+                <h2>Contact us</h2>
+
+                <div class="contact-content">
+                    <div class="contact-card">
+                        <h3>ADDRESS</h3>
+                        
+                        <ul class="contact-card-menu">
+                            <li class="contact-card-item">Englmar Apartments</li>
+                            <li class="contact-card-item">Am Predigtstuhl 2, Sankt</li>
+                            <li class="contact-card-item">Englmar, 94379, Germany</li>
+                        </ul>
+
+                        <div class="contact-map-wrapper">
+                           <iframe 
+                                class="contact-map"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10526.04618790076!2d12.808608402431698!3d49.00287968537678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477541a37e121213%3A0x41ed24a40937c9a0!2s94379%20Sankt%20Englmar%2C%20N%C4%9Bmecko!5e0!3m2!1scs!2scz!4v1709700000000!5m2!1scs!2scz" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+
+                        <ul class="contact-card-menu">
+                            <li class="contact-card-item" id="contact-card-item1"><h3>CONTACT DETAILS</h3></li>
+                            <li class="contact-card-item">email :  info@englamar-apartments.eu</li>
+                            <li class="contact-card-item">tel. :   +420 777 329 399 </li>
+                            <li class="contact-card-item">+420 603 321 731 </li>
+                        </ul>
+                    </div>
+                    <div class="contact-card">
+                    <h3>WRITE TO US</h3>
+                   <form class="contact-form">
+
+    <!-- First + Second name -->
+    <div class="form-row">
+        <input type="text" name="firstName" placeholder="First Name" required>
+        <input type="text" name="secondName" placeholder="Second Name" required>
+    </div>
+
+    <!-- Email -->
+    <input type="email" name="email" placeholder="Email" required>
+
+    <!-- Subject -->
+    <input type="text" name="subject" placeholder="Subject" required>
+
+    <!-- Message -->
+    <textarea name="message" placeholder="Message" required></textarea>
+
+    <!-- Submit -->
+    <button type="submit">Submit</button>
+
+</form>
+                </div>
+                </div>
+                
+                </div>
+           </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-card">
+            <ul class="footer-list">  
+                <li class="footer-item"><span class="footer-span">ADDRESS:</span></li>
+                <li class="footer-item">Englmar Apartments</li>
+                <li class="footer-item">Am Predigtstuhl 2</li>
+                <li class="footer-item">Sankt Englmar, 94379, Germany</li>
+            </ul>
+        </div>
+         <div class="footer-card">
+            <ul class="footer-list">
+                <li class="footer-item"><span class="footer-span">CONTACTS:</span></li>
+                <li class="footer-item">info@englamar-apartments.eu</li>
+                <li class="footer-item">+420 777 329 399</li>
+                <li class="footer-item">+420 603 321 731</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/hero-slider.js"></script>
+    <script src="js/universal-slider.js"></script>
+</body>
+</html>
