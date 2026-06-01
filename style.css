@@ -1,0 +1,1047 @@
+:root {
+  /* FONTY */
+  --font-text: 'Inter', sans-serif;
+  --font-heading: 'Playfair Display', serif;
+
+  /* BARVY */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray-light: #e7e7e7;
+  --footer-gray: #8f8f8f;
+  --color-gray: #999999;
+  --color-gray-dark: #2b2b2b;
+  --color-green-dark: #0f290f; 
+  --color-accent: #ffb20d;   
+  --color-accent-hover: #e79600;   
+}
+
+/* ------------- reset ---------------*/
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    letter-spacing: 1px;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-text);
+    color: var(--color-black);
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+h2 {
+    font-size: 1.9rem;
+    font-family: var(--font-text);
+    color: var(--color-gray-dark);
+}
+h3 {
+    font-size: 1.3rem;
+    font-family: var(--font-text);
+    color: var(--color-gray-dark);
+}
+
+/* ------------------- classes --------------------*/
+
+/* ikonky*/
+
+.icons {
+    font-size: 1.8rem;
+    cursor: pointer;
+    box-shadow: none;
+    text-shadow: none;
+    color: var(--color-black);
+}
+
+/* ----------------- univerzální slider ------------*/
+
+.universal-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slides-container {
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+}
+.slides-inner {
+    display: flex;
+    will-change: transform; 
+    transform: translate3d(0, 0, 0); 
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slides-inner img {
+    width: 100%;
+    flex-shrink: 0;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    display: block;
+    -webkit-user-drag: none;
+}
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    font-weight: bold;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* ----------------- scroll margin ------------*/
+#adriana, #aneta, #apartments, #activities, #reservation {
+    scroll-margin-top: 150px;
+}
+#contact {
+    scroll-margin-top: 50px;
+}
+/* ----------------------- header ------------------------*/
+
+/*------------------- naviagce -----------------*/
+
+.nav-content {
+    padding: 8px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    position: fixed;
+    background-color: transparent;
+    z-index: 2100;
+    transition: .3s ease;
+}
+.nav-content.scrolled {
+    padding: 8px 25px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+/*logo*/
+
+
+.logo-container {
+    height: 60px;
+}
+.logo {
+    height: 100%;
+    display: block;
+}
+
+/*naviagce*/
+
+
+nav {
+    height: 100vh;
+    width: 70vw;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-white);
+    box-shadow: -8px 0 20px rgba(0, 0, 0, 0.15);
+    z-index: 2200;
+    transition: .3s ease;
+}
+nav.active {
+    right: 0;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.nav-link {
+    position: relative;
+    font-size: 1.2rem;
+}
+
+.nav-link::after {
+    width: 0%;
+    height: 2px;
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -6px;
+    background: var(--color-black);
+    transition: width 0.3s ease;
+}
+
+.nav-link.active-link::after {
+    width: 100%;
+}
+
+.close-icon {
+    font-size: 2.4rem;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+/*menu-btn*/
+
+
+.menu-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/*dropdowns - apartmány, mutace*/
+/*apartmány*/
+
+
+.apartments-dropdown-menu-wrapper { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.apartments-dropdown-btn {
+    position: absolute;
+    left: 165px;
+}
+.apartments-icon {
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--color-black);
+    transition: transform 0.5s ease-in-out;
+}
+.nav-item.active .apartments-icon {
+    transform: rotate(180deg);
+}
+
+.apartments-dropdown {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transform: translateY(-10px);
+    transition: .5s ease;
+}
+.nav-item.active .apartments-dropdown {
+    margin-top: 20px;
+    max-height: 150px;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.apartments-dropdown-link {
+    padding: 10px 12px;
+    margin: 10px 0;
+    display: block;
+    background-color: var(--color-gray-light);
+    color: var(--color-black);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+/*mutace*/
+
+.language-menu-wrapper {
+    width: 80px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    right: 65px;
+    background-color: var(--color-accent);
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transform-style: preserve-3d; 
+    z-index: 2100;
+}
+.current-language {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+.language-icon {
+    font-size: 1.2rem;
+    font-weight: 300;
+    cursor: pointer;
+    color: var(--color-black);
+    transition: transform 0.3s ease-in-out;
+}
+.language-menu-wrapper.active .language-icon {
+    transform: rotate(180deg);
+}
+
+.language-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 110%;
+    background-color: var(--color-accent);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+.language-menu-wrapper.active .language-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.language-link {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: var(--color-black);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.language-link:hover {
+    background-color: var(--color-accent-hover);
+}
+
+
+
+/* --------------------------- main --------------------------------*/
+
+/* ------------- hero slider ----------------*/
+
+#hero-slider {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    overflow: hidden;
+    background: var(--color-gray-light);
+    z-index: 2000;
+}
+.hero-slider-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0));
+    z-index: 2000;
+}
+.hero-slider-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.hero-slider-track {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    will-change: transform;
+}
+.hero-slide {
+    min-width: 100%;
+    height: 100%;
+}
+.hero-slide img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* šipky */
+.slider-btn {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2025;
+    transition: all 0.3s ease;
+}
+.slider-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    scale: 1.05;
+}
+.slider-btn.prev { left: 2rem; }
+.slider-btn.next { right: 2rem; }
+
+.hero-slider-track::-webkit-scrollbar { display: none; }
+
+
+/* ------------- hero kontent --------------*/
+
+#hero {
+    height: auto;
+    background-color: var(--color-gray-light);
+}
+
+.hero-container {
+    padding: 5vh 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-content {
+    min-height: 300px;
+    width: 90vw;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+    margin: -100px auto 0 auto;
+    border-radius: 20px;
+    background-color: var(--color-green-dark);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    z-index: 2050;
+    transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transform: translateY(17vh);
+}
+
+.hero-content.scrolled {
+    transform: translateY(0);
+}
+
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    color: var(--color-white);
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+
+.hero-p {
+    font-size: 1rem;
+    font-weight: 100;
+    color: var(--color-gray-light);
+}
+
+.hero-cta-link {
+    padding: 7px 40px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-accent);
+    border-radius: 15px;
+    border: 2px solid var(--color-accent);
+    transition: .3s ease;
+}
+
+.hero-cta-link:hover {
+    color: var(--color-white);
+    background-color: var(--color-accent);
+}
+
+/* ------------------ sekce apartmány ----------------*/
+
+#apartments {
+    margin-bottom: 80px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.our-offer {
+    margin-bottom: 80px;
+}
+.apartments-content-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.apartments-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.apartment-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.apartment-img-wrapper {
+    width: 100%;
+    height: auto;
+}
+
+.apartment-img-wrapper img {
+    height: 100%;
+    width: 100%;
+}
+.apartment-card h3 {
+    margin-top: 50px;
+}
+.apartments-subtitle {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.apartment-p {
+    margin-top: 20px;
+    padding: 0 10%;
+    font-size: 1rem;
+    font-weight: 100;
+    text-align: center;
+}
+.apartment-cta-link {
+    margin-top: 30px;
+    padding: 10px 40px;
+    font-size: 0.9rem;
+    font-weight: 300;
+    background-color: var(--color-accent);
+    color: var(--color-black);
+    transition: .3s ease;
+}
+.apartment-cta-link:hover {
+    background-color: var(--color-accent-hover);
+}
+
+
+.apartments-info-wrapper {
+    margin-top: 120px;
+    padding-bottom: 80px;
+    background-color: var(--color-gray-light);
+}
+.apartment-info {
+    margin-top: 80px;
+}
+.apartment-info-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.apartment-info-subtitle {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    font-weight: 900;
+}
+.apartment-info-p {
+     margin-top: 20px;
+    padding: 0 10%;
+    font-size: 1rem;
+    font-weight: 100;
+    text-align: center;
+}
+.apartment-info-cta {
+    margin-top: 30px;
+    padding: 10px 40px;
+    font-size: 0.9rem;
+    font-weight: 300;
+    background-color: var(--color-accent);
+    color: var(--color-black);
+    transition: .3s ease;
+}
+.apartment-info-cta:hover {
+    background-color: var(--color-accent-hover);
+}
+.apartment-info-slider-wrapper {
+    margin-top: 50px;
+}
+
+/* ---------------------- sekce aktivity -----------------------*/
+#activities {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+#activities h2 {
+    margin-top: 50;
+    margin-bottom: 50px;
+}
+.arround-cards {
+    padding: 0 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 70px;
+}
+.arround-card {
+    width: 95%;
+    padding: 8% 5%;
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 12px;
+    background-color: var(--color-gray-light);
+}
+.arround-p {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.activities-cards {
+    margin-top: 80px;
+    padding:5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 60px;
+    background-color: var(--color-green-dark);
+}
+.activiti-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--color-gray-light);
+}
+.activiti-card  h3 {
+    color: var(--color-gray-light);
+}
+.activities-p {
+    margin-top: 25px;
+    padding: 3%;
+    font-size: 1rem;
+    text-align: center;
+}
+.activities-info-slider-wrapper {
+    padding-bottom: 80px;
+    background-color: var(--color-green-dark);
+}
+
+/* ---------------------- sekce rezervace --------------------*/
+#reservation {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ------------------- sekce kontakt -------------------------*/
+.contact-content-wrapper {
+    padding: 80px 0;
+    background-color: rgb(235, 235, 235);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contact-content {
+    padding: 50px 0 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+}
+.contact-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;   
+}
+.contact-card-menu {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#contact-card-item1 {
+    margin-top: 20PX;
+    margin-bottom: 30px;
+} 
+
+.contact-map {
+    margin-top: 50px;
+    width: 95vw;          
+    height: 250px ;         
+    display: block;
+    border: 0;
+}
+
+/* formulář */
+/* ------------------- CONTACT FORM -------------------*/
+
+.contact-form {
+    margin-top: 50px;
+    width: 90vw;
+    max-width: 500px;
+    padding: 30px;
+    background-color: var(--color-white);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* row pro jméno */
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+/* inputy */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-family: var(--font-text);
+    font-size: 0.9rem;
+    border: 1px solid var(--color-gray-light);
+    border-radius: 12px;
+    background-color: #fafafa;
+    transition: all 0.25s ease;
+}
+
+/* focus efekt */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--color-accent);
+    background-color: var(--color-white);
+    box-shadow: 0 0 0 3px rgba(255, 178, 13, 0.2);
+    outline: none;
+}
+
+/* textarea */
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* placeholder jemnější */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--color-gray);
+    font-weight: 300;
+}
+
+/* button */
+.contact-form button {
+    margin-top: 10px;
+    padding: 12px;
+    background-color: var(--color-accent);
+    color: var(--color-black);
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* hover */
+.contact-form button:hover {
+    background-color: var(--color-accent-hover);
+}
+
+/* click efekt */
+.contact-form button:active {
+    transform: scale(0.97);
+}
+
+/* responsive */
+@media (max-width: 500px) {
+    .form-row {
+        flex-direction: column;
+    }
+}
+
+/* --------------------- patička ---------------------*/
+footer {
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    background-color: var(--footer-gray);
+}
+.footer-span {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    font-weight: 900;
+} 
+.footer-menu {
+    margin-top: 15px;
+}
+.footer-item {
+    text-align: center;
+}
+
+/* ---------------------------- responzivita -----------------------*/
+
+@media (min-width: 700px) {
+    .arround-cards {
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: center;
+        gap: 30px;
+    }
+    .arround-card {
+        max-width: 800px;
+        width: 100%;
+        flex: 1;
+        padding: 40px 20px;
+    }
+     .contact-map {
+        width: 500px; 
+        height: 250px;   
+    }
+}
+@media (min-width: 1150px) {
+
+    h2 {
+        font-size: 2.8rem;
+    }
+    h3 {
+        font-size: 1.6rem;
+    }
+
+    /* univerzální slider*/
+    .universal-slider {
+        width: 60%;
+    }
+    
+
+
+   /* ---------- navigace ----------*/
+    
+   /*logo*/
+    
+   .logo-container {
+        height: 80px;
+    }
+    
+    /*naviagce*/
+    
+    .nav-content {
+        padding: 8px  10%;
+    }
+    .nav-content.scrolled {
+        padding: 8px 11%;
+    }
+    nav {
+        position: static;       
+        height: auto;
+        width: auto;
+        box-shadow: none;
+        background: transparent;
+        transition: none;
+    }
+    .nav-menu {
+        flex-direction: row;
+        gap: 30px;
+    }
+    .open-btn, .close-btn {
+        display: none;
+    }
+
+    
+    /*dropdown* apartmány*/
+    
+    .apartments-dropdown-menu-wrapper {
+        gap: 15px;
+    }
+    .apartments-dropdown-btn {
+        position: relative;
+        left: 0;
+    }
+    .apartments-dropdown {
+        position: absolute;
+        top: 70%;
+        left: 46%;
+        transform: translateX(-50%) translateY(10px);
+        max-height: none; 
+        min-width: 170px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+    .nav-item.active .apartments-dropdown {
+        transform: translateX(-50%) translateY(0);
+        max-height: none;
+    }
+    .apartments-dropdown-link {
+        padding: 10px 25px;
+        margin: 0;
+        border-radius: 0;
+        background-color: rgb(241, 241, 241);
+    }
+    .apartments-dropdown-link:hover {
+        background-color: rgb(211, 211, 211);
+    }
+
+    /*mutace*/
+
+    .language-menu-wrapper {
+    min-width: 110px;
+    min-height: 50px;
+    position: static;
+    }
+    
+    /* ---------- hero sekce ----------*/
+    
+    /*hero*/
+    
+    .hero-p {
+        font-size: 1.05rem;
+    }
+    .hero-cta-link {
+        font-size: 1.05rem;
+    }
+    
+    /* ----------- sekce apartmány --------*/
+
+    .apartments-cards {
+        padding: 0 100px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start; 
+        justify-content: center;
+        gap: 70px;
+    }
+    .apartment-card {
+        flex: 1; 
+    }
+    .apartment-cta-link {
+        display: inline-block;
+        margin-top: 30px; 
+        padding: 10px 40px;
+    }
+    .apartments-subtitle {
+        font-size: 1rem;
+    }
+    .apartments-p {
+        font-size: 1.05rem;
+    }
+    .apartment-cta-link {
+        font-size: 1.05rem;
+    }
+
+    .apartment-info-subtitle {
+        font-size: 1rem;
+    }
+    .apartment-info-p {
+        width: 90%;
+        font-size: 1.05rem;
+    }
+    .apartment-info-cta {
+        font-size: 1.05rem;
+        padding: 10px 40px;
+    }
+
+    /* --------- sekce aktivity --------*/
+
+    .activities-cards {
+        flex-direction: row;
+        align-items: stretch; 
+        gap: 30px;
+    }
+    .activiti-card {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .activities-p {
+        font-size: 1.05rem;
+        padding: 0 20%;
+    }
+
+    .contact-content {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 150px;
+    }
+
+    footer {
+        height: 200px;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+@media (min-width: 1500px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+    .hero-content {
+        width: 60%;
+    }
+}
+
+
+#previo-booking-engine {
+    width: 95% !important;
+}
